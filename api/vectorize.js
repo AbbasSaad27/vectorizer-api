@@ -1,4 +1,9 @@
-import { vectorize } from "@neplex/vectorizer";
+import {
+  vectorize,
+  ColorMode,
+  Hierarchical,
+  PathSimplifyMode,
+} from "@neplex/vectorizer";
 
 export default async function handler(req, res) {
 
