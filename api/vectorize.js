@@ -25,10 +25,8 @@ export default async function handler(req, res) {
       const inputBuffer = Buffer.concat(buffers);
       const svg = await vectorize(inputBuffer, {
   colorMode: ColorMode.Color,
-  colorPrecision: 6,
+  colorPrecision: 8,
   filterSpeckle: 4,
-  spliceThreshold: 45,
-  cornerThreshold: 60,
   hierarchical: Hierarchical.Stacked,
   mode: PathSimplifyMode.Polygon,
   layerDifference: 5,
