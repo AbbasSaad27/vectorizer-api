@@ -26,7 +26,17 @@ export default async function handler(req, res) {
   req.on("end", async () => {
     try {
       const inputBuffer = Buffer.concat(buffers);
-      const svg = await vectorize(inputBuffer);
+      const svg = await vectorize(inputBuffer, , {
+        colorMode: ColorMode.Color,
+        colorPrecision: 8,
+        filterSpeckle: 6,
+        hierarchical: Hierarchical.Stacked,
+        mode: PathSimplifyMode.Polygon,
+        layerDifference: 5,
+        lengthThreshold: 5,
+        maxIterations: 2,
+        pathPrecision: 5,
+      });
       res.setHeader("Content-Type", "image/svg+xml");
       res.status(200).send(svg);
     } catch (err) {
