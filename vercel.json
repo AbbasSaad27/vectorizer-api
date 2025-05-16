@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "functions": {
+    "api/vectorize.js": {
+      "memory": 1024,
+      "maxDuration": 10
+    }
+  },
+  "routes": [
+    {
+      "src": "/vectorize",
+      "dest": "api/vectorize.js"
+    }
+  ]
+}
