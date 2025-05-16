@@ -1,5 +1,5 @@
 import {
-  vectorizeRaw,
+  vectorize,
   ColorMode,
   Hierarchical,
   PathSimplifyMode,
@@ -26,7 +26,7 @@ export default async function handler(req, res) {
   req.on("end", async () => {
     try {
       const inputBuffer = Buffer.concat(buffers);
-      const svg = await vectorizeRaw(inputBuffer);
+      const svg = await vectorize(inputBuffer);
       res.setHeader("Content-Type", "image/svg+xml");
       res.status(200).send(svg);
     } catch (err) {
