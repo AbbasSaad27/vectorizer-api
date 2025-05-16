@@ -27,6 +27,8 @@ export default async function handler(req, res) {
   colorMode: ColorMode.Color,
   colorPrecision: 8,
   filterSpeckle: 4,
+        spliceThreshold: 45,
+        cornerThreshold: 60,
   hierarchical: Hierarchical.Stacked,
   mode: PathSimplifyMode.Polygon,
   layerDifference: 5,
