@@ -28,7 +28,11 @@ export default async function handler(req, res) {
         colorPrecision: 8,
         filterSpeckle: 6,
         hierarchical: Hierarchical.Stacked,
-        mode: PathSimplifyMode.Polygon,
+        mode: PathSimplifyMode.Spline,
+        layerDifference: 5,
+        lengthThreshold: 5,
+        maxIterations: 2,
+        pathPrecision: 5,
       });
       res.setHeader("Content-Type", "image/svg+xml");
       res.status(200).send(svg);
