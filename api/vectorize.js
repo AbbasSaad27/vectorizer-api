@@ -30,7 +30,7 @@ export default async function handler(req, res) {
         spliceThreshold: 45,
         cornerThreshold: 60,
         hierarchical: Hierarchical.Stacked,
-        mode: PathSimplifyMode.Polygon,
+        mode: PathSimplifyMode.Spline,
         layerDifference: 5,
         lengthThreshold: 5,
         maxIterations: 2,
