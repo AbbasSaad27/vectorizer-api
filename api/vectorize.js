@@ -31,7 +31,7 @@ export default async function handler(req, res) {
         cornerThreshold: 60,
         hierarchical: Hierarchical.Stacked,
         mode: PathSimplifyMode.Spline,
-        layerDifference: 5,
+        layerDifference: 3,
         lengthThreshold: 5,
         maxIterations: 2,
         pathPrecision: 5,
