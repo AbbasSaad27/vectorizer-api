@@ -32,9 +32,9 @@ export default async function handler(req, res) {
         hierarchical: Hierarchical.Stacked,
         mode: PathSimplifyMode.None,
         layerDifference: 0,
-        lengthThreshold: 2,
+        lengthThreshold: 15,
         maxIterations: 2,
-        pathPrecision: 1,
+        pathPrecision: 5,
       });
       res.setHeader("Content-Type", "image/svg+xml");
       res.status(200).send(svg);
