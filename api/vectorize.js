@@ -32,7 +32,7 @@ export default async function handler(req, res) {
         hierarchical: Hierarchical.Stacked,
         mode: PathSimplifyMode.None,
         layerDifference: 0,
-        lengthThreshold: 5,
+        lengthThreshold: 2,
         maxIterations: 2,
         pathPrecision: 1,
       });
