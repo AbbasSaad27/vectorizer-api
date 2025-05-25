@@ -34,7 +34,7 @@ export default async function handler(req, res) {
         layerDifference: 0,
         lengthThreshold: 5,
         maxIterations: 2,
-        pathPrecision: 5,
+        pathPrecision: 1,
       });
       res.setHeader("Content-Type", "image/svg+xml");
       res.status(200).send(svg);
