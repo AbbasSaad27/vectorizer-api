@@ -26,10 +26,10 @@ export default async function handler(req, res) {
       const svg = await vectorize(inputBuffer, {
         colorMode: ColorMode.Color,
         colorPrecision: 8,
-        filterSpeckle: 14,
+        filterSpeckle: 4,
         spliceThreshold: 45,
         cornerThreshold: 60,
-        hierarchical: Hierarchical.Cutout,
+        hierarchical: Hierarchical.Stacked,
         mode: PathSimplifyMode.None,
         layerDifference: 0,
         lengthThreshold: 15,
