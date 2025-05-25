@@ -29,7 +29,7 @@ export default async function handler(req, res) {
         filterSpeckle: 14,
         spliceThreshold: 45,
         cornerThreshold: 60,
-        hierarchical: Hierarchical.Stacked,
+        hierarchical: Hierarchical.Cutout,
         mode: PathSimplifyMode.None,
         layerDifference: 0,
         lengthThreshold: 15,
